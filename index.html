@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selling Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="eagle.png" alt="logo"> Fast Lane Albania</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#add-car">Sell Your Car</a></li>
+                <li><a href="page2.html">SignUp</a></li>
+                <li><a href="page3.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="image-container">
+        
+            <img class="imazhi" src="https://www.themilliardaire.com/wp-content/uploads/2022/07/F1rst-Motors-1a.jpeg" alt="Background Image">
+            <div class="centered-text">
+            <h1>Your Car Awaits</h1>
+            <p>Discover the best deals on luxury and performance cars</p>
+        </div>
+        
+
+    </div>
+
+    <section id="inventory" class="inventory">
+        <h2>Available Cars</h2>
+        <div class="car-list" id="car-list">
+            <div class="car-item">
+                <img src="https://cdn.motor1.com/images/mgl/7ZmbmJ/s1/audi-rs7-by-abt.webp" alt="Car 1">
+                <h3>Audi RS7-LE ABT</h3>
+                <p>1001 PS</p>
+                <p>$310,000</p>
+            </div>
+            <div class="car-item">
+                <img src="https://www.topgear.com/sites/default/files/2022/06/1-Mercedes-AMG-E-Class-Final-Edition.jpg" alt="Car 2">
+                <h3>Mercedes-Benz E63s 2022</h3>
+                <p>612 PS </p>
+                <p>$140,000</p>
+            </div>
+            <div class="car-item">
+                <img src="https://media.evo.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1556220915/evo/2018/07/manhart_mh5_700_-_20.jpg" alt="Car 3">
+                <h3>BMW M5 Manhart Edition</h3>
+                <p>700 PS</p>
+                <p>$175,000</p>
+            </div>
+            <div class="car-item">
+                <img src="https://www.maxtondesign.co.uk/image/cache/catalog/product/20240106/20240106161755_65997d3330333-1000x750.jpg" alt="Car 4">
+                <h3>VW Golf MK8 R 2.0TSI DSG</h3>
+                <p>320 PS</p>
+                <p>$63,500</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="add-car" class="add-car">
+        <h2>Sell Your Car</h2>
+        <form id="add-car-form">
+            <div class="form-group">
+                <label for="car-title">Mark/Model:</label>
+                <input type="text" id="car-title" name="car-title" placeholder="Enter Mark/Model" required>
+            </div>
+            <div class="form-group">
+                <label for="car-price">Price ($):</label>
+                <input type="number" id="car-price" name="car-price" placeholder="Enter price" required>
+            </div>
+            <div class="form-group">
+                <label for="car-ccc">Horsepower:</label>
+                <input type="number" id="car-horsepower" name="car-horsepower" placeholder="Enter horsepower" required>
+            </div>
+            <div class="form-group">
+                <label for="car-image">Car Image:</label>
+                <input type="file" id="car-image" name="car-image" accept="image/*"  required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <br>
+    <footer><p>Contact us:<br>+38344556677 <br> fastlanealbania@hotmail.com</p></footer>
+    
+
+   <script src="app.js"></script>
+</body>
+</html>
