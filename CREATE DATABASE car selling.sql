@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream:CREATE DATABASE car selling.sql
 
 CREATE DATABASE IF NOT EXISTS car_selling;
+=======
+CREATE DATABASE car_sellingg;
+>>>>>>> Stashed changes:CREATE DATABASE car_selling.sql
 
 USE car_selling;
 
