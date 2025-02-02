@@ -43,4 +43,3 @@ document.getElementById("add-car-form").addEventListener("submit", function (eve
    
     reader.readAsDataURL(carImage);
 });
-
