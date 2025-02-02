@@ -1,0 +1,19 @@
+CREATE DATABASE car_sales;
+
+USE car_sales;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE cars (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    horsepower INT NOT NULL,
+    image_path VARCHAR(255) NOT NULL
+);
