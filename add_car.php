@@ -1,30 +1,26 @@
 <?php
 include 'db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["car-image"])) {
-    $title = htmlspecialchars(trim($_POST['car-title']));
-    $price = htmlspecialchars(trim($_POST['car-price']));
-    $horsepower = htmlspecialchars(trim($_POST['car-horsepower']));
-    $image_path = "uploads/" . basename($_FILES["car-image"]["name"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $brand = htmlspecialchars(trim($_POST['Brand']));
+    $model = htmlspecialchars(trim($_POST['Model']));
+    $year = htmlspecialchars(trim($_POST['Year']));
+    $price = htmlspecialchars(trim($_POST['Price']));
 
-    if (move_uploaded_file($_FILES["car-image"]["tmp_name"], $image_path)) {
-        $stmt = $conn->prepare("INSERT INTO cars (title, price, horsepower, image_path) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $title, $price, $horsepower, $image_path);
+    $stmt = $conn->prepare("INSERT INTO cars (brand, model, year, price) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("sssi", $brand, $model, $year, $price);
 
-        if ($stmt->execute()) {
-            echo "<p style='color:green;'>Car added successfully!</p>";
-        } else {
-            echo "<p style='color:red;'>Error: " . $stmt->error . "</p>";
-        }
-
-        $stmt->close();
+    if ($stmt->execute()) {
+        echo "<p style='color:green;'>Car added successfully!</p>";
     } else {
-        echo "<p style='color:red;'>Failed to upload image.</p>";
+        echo "<p style='color:red;'>Error: " . $stmt->error . "</p>";
     }
 
-    $conn->close();
+    $stmt->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
